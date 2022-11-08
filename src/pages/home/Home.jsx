@@ -3,6 +3,8 @@ import Featured from "../../components/featured/Featured";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Widget from "../../components/widget/Widget";
+import Table from "../../components/table/Table";
+
 import "./home.scss";
 const Home = () => {
   return (
@@ -22,6 +24,7 @@ const Home = () => {
         </div>
         <div className="listContainer">
           <div className="listTitle">Latest Transactions</div>
+          <Table />
         </div>
       </div>
     </div>
