@@ -11,11 +11,14 @@ import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import SettingsSuggestOutlinedIcon from "@mui/icons-material/SettingsSuggestOutlined";
 import SupervisedUserCircleOutlinedIcon from "@mui/icons-material/SupervisedUserCircleOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">ervin_admin</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">ervin_admin</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
@@ -26,15 +29,18 @@ const Sidebar = () => {
             <span>Dashboard </span>
           </li>
           <p className="title">LISTS</p>
-
-          <li>
-            <PeopleOutlineIcon className="icon" />
-            <span>Users </span>
-          </li>
-          <li>
-            <PrecisionManufacturingOutlinedIcon className="icon" />
-            <span>Products </span>
-          </li>
+          <Link to="users" style={{ textDecoration: "none" }}>
+            <li>
+              <PeopleOutlineIcon className="icon" />
+              <span>Users </span>
+            </li>
+          </Link>
+          <Link to="products" style={{ textDecoration: "none" }}>
+            <li>
+              <PrecisionManufacturingOutlinedIcon className="icon" />
+              <span>Products </span>
+            </li>
+          </Link>
           <li>
             <FlipToFrontIcon className="icon" />
             <span>Orders </span>
